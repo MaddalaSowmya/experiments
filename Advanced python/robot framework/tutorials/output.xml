@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-27T12:19:48.819120" rpa="false" schemaversion="5">
+<suite id="s1" name="Variables" source="C:\Users\Administrator\Desktop\Advanced python\robot framework\tutorials\variables.robot">
+<test id="s1-t1" name="Test Case 1" line="11">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-27T12:19:49.241311" level="INFO">John</msg>
+<arg>${my_var}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-27T12:19:49.241311" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-27T12:19:49.241311" level="INFO">['Apple', 'Orange', 'Banana']</msg>
+<arg>${my_list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-27T12:19:49.241311" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-27T12:19:49.256955" level="INFO">{'name': 'admin', 'password': 'admin123'}</msg>
+<arg>${my_dict}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-27T12:19:49.256955" level="INFO">['Apple', 'Orange', 'Banana']</msg>
+<arg>${item}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</kw>
+<var name="${item}">['Apple', 'Orange', 'Banana']</var>
+<status status="PASS" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</iter>
+<var>${item}</var>
+<value>${my_list}</value>
+<status status="PASS" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-27T12:19:49.256955" level="INFO">admin</msg>
+<arg>${my_dict}[name]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-05-27T12:19:49.256955" level="INFO">admin123</msg>
+<arg>${my_dict}[password]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log Many" owner="BuiltIn">
+<arg>${key}</arg>
+<arg>${value}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="NOT RUN" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</kw>
+<var name="${key}"/>
+<var name="${value}"/>
+<status status="NOT RUN" start="2024-05-27T12:19:49.256955" elapsed="0.000000"/>
+</iter>
+<msg time="2024-05-27T12:19:49.256955" level="FAIL">Number of FOR loop values should be multiple of its variables. Got 2 variables but 1 value.</msg>
+<var>${key}</var>
+<var>${value}</var>
+<value>${my_dict}</value>
+<status status="FAIL" start="2024-05-27T12:19:49.256955" elapsed="0.000000">Number of FOR loop values should be multiple of its variables. Got 2 variables but 1 value.</status>
+</for>
+<status status="FAIL" start="2024-05-27T12:19:49.241311" elapsed="0.015644">Number of FOR loop values should be multiple of its variables. Got 2 variables but 1 value.</status>
+</test>
+<status status="FAIL" start="2024-05-27T12:19:48.819120" elapsed="0.437835"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Variables">Variables</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

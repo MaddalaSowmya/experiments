@@ -1,0 +1,6 @@
+l = iter([1,121,31,5,90])
+print(next(l))
+print(next(l))
+print(next(l))
+print(next(l))
+print(next(l))
